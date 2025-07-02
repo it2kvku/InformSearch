@@ -23,6 +23,15 @@ namespace InformSearch
         private readonly Color FinalPathColor = Color.Green;
         private readonly Color HighlightCityColor = Color.Yellow;
 
+        // Animation speed control for TSP
+        private int tspAnimationSpeed = 200; // Default speed in milliseconds
+        
+        // Speed constants for TSP
+        private const int TSP_SPEED_SLOW = 800;
+        private const int TSP_SPEED_NORMAL = 200;
+        private const int TSP_SPEED_FAST = 50;
+        private const int TSP_SPEED_INSTANT = 1;
+
         public TSPForm()
         {
             InitializeComponent();
@@ -341,7 +350,7 @@ namespace InformSearch
                 };
                 
                 graphPanel.Invalidate();
-                await Task.Delay(1000); // Animation delay
+                await Task.Delay(tspAnimationSpeed); // Use animation speed variable
             }
 
             // Show final result

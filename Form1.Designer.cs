@@ -20,6 +20,8 @@ partial class Form1
     private Label lblAlgorithm;
     private Label lblCost;
     private Label lblSteps;
+    private ComboBox cmbSpeed;
+    private Label lblSpeed;
 
     /// <summary>
     ///  Clean up any resources being used.
@@ -55,6 +57,10 @@ partial class Form1
         this.lblCost = new Label();
         this.lblSteps = new Label();
         this.panelControls = new Panel();
+        this.cmbSpeed = new ComboBox();
+        this.lblSpeed = new Label();
+        this.cmbSpeed = new ComboBox();
+        this.lblSpeed = new Label();
         this.SuspendLayout();
         
         // 
@@ -192,6 +198,55 @@ partial class Form1
         this.lblSteps.TabIndex = 10;
         this.lblSteps.Text = "Steps Explored: 0";
         
+        // 
+        // lblSpeed
+        // 
+        this.lblSpeed.Location = new Point(10, 470);
+        this.lblSpeed.Name = "lblSpeed";
+        this.lblSpeed.Size = new Size(180, 20);
+        this.lblSpeed.TabIndex = 11;
+        this.lblSpeed.Text = "Animation Speed:";
+        
+        // 
+        // cmbSpeed
+        // 
+        this.cmbSpeed.DropDownStyle = ComboBoxStyle.DropDownList;
+        this.cmbSpeed.FormattingEnabled = true;
+        this.cmbSpeed.Items.AddRange(new object[] {
+            "Instant",
+            "Fast", 
+            "Normal",
+            "Slow"});
+        this.cmbSpeed.Location = new Point(10, 495);
+        this.cmbSpeed.Name = "cmbSpeed";
+        this.cmbSpeed.Size = new Size(180, 28);
+        this.cmbSpeed.TabIndex = 12;
+        this.cmbSpeed.SelectedIndex = 2; // Default to "Normal"
+        
+        // 
+        // cmbSpeed
+        // 
+        this.cmbSpeed.DropDownStyle = ComboBoxStyle.DropDownList;
+        this.cmbSpeed.FormattingEnabled = true;
+        this.cmbSpeed.Items.AddRange(new object[] {
+        "Slow",
+        "Normal",
+        "Fast"});
+        this.cmbSpeed.Location = new Point(10, 470);
+        this.cmbSpeed.Name = "cmbSpeed";
+        this.cmbSpeed.Size = new Size(180, 28);
+        this.cmbSpeed.TabIndex = 11;
+        this.cmbSpeed.SelectedIndex = 1; // Default to Normal speed
+        
+        // 
+        // lblSpeed
+        // 
+        this.lblSpeed.Location = new Point(10, 510);
+        this.lblSpeed.Name = "lblSpeed";
+        this.lblSpeed.Size = new Size(180, 20);
+        this.lblSpeed.TabIndex = 12;
+        this.lblSpeed.Text = "Speed: Normal";
+        
         // Add controls to panels
         this.panelControls.Controls.Add(this.btnGreedy);
         this.panelControls.Controls.Add(this.btnUCS);
@@ -204,6 +259,8 @@ partial class Form1
         this.panelControls.Controls.Add(this.lblAlgorithm);
         this.panelControls.Controls.Add(this.lblCost);
         this.panelControls.Controls.Add(this.lblSteps);
+        this.panelControls.Controls.Add(this.cmbSpeed);
+        this.panelControls.Controls.Add(this.lblSpeed);
         
         // 
         // Form1

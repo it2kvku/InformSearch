@@ -25,10 +25,25 @@ public partial class Form1 : Form
     private readonly Color PathColor = Color.Orange;
     private readonly Color DefaultColor = Color.LightSteelBlue;
 
+    // Animation speed control
+    private int animationSpeed = 150; // Default speed in milliseconds
+    
+    // Speed constants
+    private const int SPEED_SLOW = 500;
+    private const int SPEED_NORMAL = 150;
+    private const int SPEED_FAST = 50;
+    private const int SPEED_INSTANT = 1;
+
     public Form1()
     {
         InitializeComponent();
         InitializeGraph();
+        
+        // Setup speed control event handler
+        if (cmbSpeed != null)
+        {
+            cmbSpeed.SelectedIndexChanged += cmbSpeed_SelectedIndexChanged;
+        }
     }
     
     private void InitializeGraph()
@@ -338,13 +353,13 @@ public partial class Form1 : Form
     
     private async Task VisualizeSearch(GraphSearchResult result)
     {
-        // First, show explored nodes
+        // Much faster animation - show explored nodes
         foreach (var nodeName in result.ExploredNodes)
         {
             if (nodeName != graph.StartNode && nodeName != graph.GoalNode)
             {
                 nodeButtons[nodeName].BackColor = ExploredColor;
-                await Task.Delay(500); // Animation delay
+                await Task.Delay(animationSpeed); // Use controlled animation speed
                 Application.DoEvents();
             }
         }
@@ -352,13 +367,13 @@ public partial class Form1 : Form
         // Then, highlight the final path
         if (result.Path != null && result.Path.Count > 0)
         {
-            await Task.Delay(500);
+            await Task.Delay(animationSpeed); // Use controlled animation speed
             foreach (var nodeName in result.Path)
             {
                 if (nodeName != graph.StartNode && nodeName != graph.GoalNode)
                 {
                     nodeButtons[nodeName].BackColor = PathColor;
-                    await Task.Delay(300);
+                    await Task.Delay(animationSpeed); // Use controlled animation speed
                     Application.DoEvents();
                 }
             }
@@ -372,6 +387,28 @@ public partial class Form1 : Form
             if (nodeName != graph.StartNode && nodeName != graph.GoalNode && nodeButtons.ContainsKey(nodeName))
             {
                 nodeButtons[nodeName].Text = $"{nodeName}\n{cost}"; // Correct line break
+            }
+        }
+    }
+
+    private void cmbSpeed_SelectedIndexChanged(object? sender, EventArgs e)
+    {
+        if (cmbSpeed.SelectedIndex >= 0)
+        {
+            switch (cmbSpeed.SelectedIndex)
+            {
+                case 0: // Instant
+                    animationSpeed = SPEED_INSTANT;
+                    break;
+                case 1: // Fast
+                    animationSpeed = SPEED_FAST;
+                    break;
+                case 2: // Normal
+                    animationSpeed = SPEED_NORMAL;
+                    break;
+                case 3: // Slow
+                    animationSpeed = SPEED_SLOW;
+                    break;
             }
         }
     }
