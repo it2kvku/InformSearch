@@ -1,0 +1,15 @@
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\bin\Debug\net9.0-windows\InformSearch.exe
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\bin\Debug\net9.0-windows\InformSearch.deps.json
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\bin\Debug\net9.0-windows\InformSearch.runtimeconfig.json
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\bin\Debug\net9.0-windows\InformSearch.dll
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\bin\Debug\net9.0-windows\InformSearch.pdb
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\obj\Debug\net9.0-windows\InformSearch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\obj\Debug\net9.0-windows\InformSearch.AssemblyInfoInputs.cache
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\obj\Debug\net9.0-windows\InformSearch.AssemblyInfo.cs
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\obj\Debug\net9.0-windows\InformSearch.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\obj\Debug\net9.0-windows\InformSearch.sourcelink.json
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\obj\Debug\net9.0-windows\InformSearch.dll
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\obj\Debug\net9.0-windows\refint\InformSearch.dll
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\obj\Debug\net9.0-windows\InformSearch.pdb
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\obj\Debug\net9.0-windows\InformSearch.genruntimeconfig.cache
+C:\Users\ADMIN\Downloads\BT ttnt\AI\new\InformSearch\obj\Debug\net9.0-windows\ref\InformSearch.dll
