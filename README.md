@@ -19,7 +19,7 @@
    ```bash
    git clone https://github.com/it2kvku/InformSearch.git
    ```
-2. **Open the solution (`Form1.cs`) in Visual Studio.**
+2. **Open the file (`Form1.cs`) in Visual Studio.**
 3. **Build the project.**
 4. **Run the application** by pressing <kbd>F5</kbd> or clicking the "Start" button.
 
